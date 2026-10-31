@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo conceptual · SM Quality Tires</title>
+  <meta name="description" content="Propuesta conceptual de demostración para SM Quality Tires. No es el sitio oficial.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/logo/sm-quality-tires-logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="top-sticky">
+    <!-- 1. Banda demostrativa -->
+    <div class="demo-band" role="note">
+      Propuesta conceptual de demostración. No es el sitio oficial de SM Quality Tires.
+    </div>
+
+    <!-- 2. Encabezado y navegación -->
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="#inicio">
+          <img src="assets/logo/sm-quality-tires-logo.webp" alt="SM Quality Tires" width="447" height="447">
+          <span aria-hidden="true">SM Quality Tires</span>
+        </a>
+        <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="site-nav">
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span id="menu-btn-text">Menú</span>
+        </button>
+        <div class="site-nav" id="site-nav">
+          <nav aria-label="Principal">
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#llantas">Llantas</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <button class="btn btn-red" type="button" data-wa-key="general">WhatsApp</button>
+            <a class="btn btn-outline-light" href="tel:+593980099210" data-cfg-tel>Llamar</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- 3. Portada -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Llantas, mantenimiento y productos para tu vehículo en Quito</h1>
+          <p class="hero-sub">Consulta medidas, servicios y disponibilidad directamente por WhatsApp.</p>
+          <div class="btn-row">
+            <a class="btn btn-red btn-lg" href="#llantas">Cotizar llantas</a>
+            <a class="btn btn-outline-light btn-lg" href="#cita">Solicitar una cita</a>
+          </div>
+          <p class="microtext">La disponibilidad, los precios y los horarios deben confirmarse directamente con el negocio.</p>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/images/taller-interior.webp" width="1070" height="901"
+               alt="Interior del taller con un elevador rojo y llantas apiladas a los lados"
+               fetchpriority="high">
+        </figure>
+      </div>
+      <div class="tread" aria-hidden="true"></div>
+    </section>
+
+    <!-- 4. Franja de confianza -->
+    <section class="trust" aria-labelledby="trust-title">
+      <div class="wrap">
+        <h2 id="trust-title" class="visually-hidden">Datos públicos observados</h2>
+        <ul class="trust-list">
+          <li><strong>4,7/5</strong><span>observado en la ficha pública</span></li>
+          <li><strong>129</strong><span>reseñas observadas</span></li>
+          <li><strong>Lunes a sábado</strong><span>horario público</span></li>
+          <li><strong>Quito</strong><span>ubicación del taller</span></li>
+        </ul>
+        <p class="note">Datos públicos consultados el <span data-cfg="fecha">29 de octubre de 2026</span>. Pueden cambiar.</p>
+      </div>
+    </section>
+
+    <!-- 5. Buscador conceptual de llantas -->
+    <section class="section dark" id="llantas" aria-labelledby="buscador-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="buscador-title">Encuentra la medida que necesitas</h2>
+          <p>Este buscador no consulta inventario. Prepara un mensaje de WhatsApp con la medida que indiques, y tú decides si lo envías.</p>
+        </div>
+
+        <form id="tire-form" class="card form-card" novalidate>
+          <div class="error-summary" id="tire-summary" role="alert" tabindex="-1" hidden></div>
+
+          <fieldset>
+            <legend>Medida de la llanta</legend>
+            <div class="grid-3">
+              <div class="field">
+                <label for="t-ancho">Ancho</label>
+                <input id="t-ancho" name="ancho" type="text" inputmode="numeric" autocomplete="off" placeholder="205" aria-describedby="t-ancho-hint t-ancho-error">
+                <p class="hint" id="t-ancho-hint">De 115 a 355</p>
+                <p class="field-error" id="t-ancho-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="t-perfil">Perfil</label>
+                <input id="t-perfil" name="perfil" type="text" inputmode="numeric" autocomplete="off" placeholder="55" aria-describedby="t-perfil-hint t-perfil-error">
+                <p class="hint" id="t-perfil-hint">De 25 a 85</p>
+                <p class="field-error" id="t-perfil-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="t-rin">Rin</label>
+                <input id="t-rin" name="rin" type="text" inputmode="numeric" autocomplete="off" placeholder="16" aria-describedby="t-rin-hint t-rin-error">
+                <p class="hint" id="t-rin-hint">De 12 a 24</p>
+                <p class="field-error" id="t-rin-error" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="t-completa">O escribe la medida completa</label>
+              <input id="t-completa" name="completa" type="text" autocomplete="off" placeholder="205/55 R16" aria-describedby="t-completa-hint t-completa-error">
+              <p class="hint" id="t-completa-hint">Si la completas, se usa en lugar de los tres campos anteriores.</p>
+              <p class="field-error" id="t-completa-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos opcionales</legend>
+            <div class="grid-2">
+              <div class="field">
+                <label for="t-marca">Marca de preferencia</label>
+                <input id="t-marca" name="marca" type="text" maxlength="40" autocomplete="off" aria-describedby="t-marca-error">
+                <p class="field-error" id="t-marca-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="t-vehiculo">Marca y modelo del vehículo</label>
+                <input id="t-vehiculo" name="vehiculo" type="text" maxlength="60" autocomplete="off" aria-describedby="t-vehiculo-error">
+                <p class="field-error" id="t-vehiculo-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="t-anio">Año del vehículo</label>
+                <input id="t-anio" name="anio" type="text" inputmode="numeric" maxlength="4" autocomplete="off" aria-describedby="t-anio-hint t-anio-error">
+                <p class="hint" id="t-anio-hint">De 1980 a 2027</p>
+                <p class="field-error" id="t-anio-error" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="t-comentario">Comentario</label>
+              <textarea id="t-comentario" name="comentario" rows="3" maxlength="200" aria-describedby="t-comentario-count t-comentario-error"></textarea>
+              <p class="hint" id="t-comentario-count"><span data-count-for="t-comentario">0</span>/200 caracteres</p>
+              <p class="field-error" id="t-comentario-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <p class="privacy">Esta demostración no guarda ni envía tus datos. Utiliza datos de prueba.</p>
+          <div class="btn-row">
+            <button class="btn btn-red btn-lg" type="submit">Preparar consulta por WhatsApp</button>
+            <button class="btn btn-outline-dark btn-lg" type="button" data-copy-form="tire">Copiar mensaje</button>
+          </div>
+          <p class="status" id="tire-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. Medidas observadas -->
+    <section class="section dark section-tight" id="medidas" aria-labelledby="medidas-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="medidas-title">Medidas observadas en el catálogo consultado</h2>
+          <p>Estas medidas fueron observadas el <span data-cfg="fecha">29 de octubre de 2026</span>. Su disponibilidad debe confirmarse por WhatsApp.</p>
+        </div>
+        <ul class="chips" id="chips">
+          <li><button type="button" class="chip" data-medida="165/65 R13" aria-pressed="false">165/65 R13</button></li>
+          <li><button type="button" class="chip" data-medida="165/70 R13" aria-pressed="false">165/70 R13</button></li>
+          <li><button type="button" class="chip" data-medida="175/70 R13" aria-pressed="false">175/70 R13</button></li>
+          <li><button type="button" class="chip" data-medida="185/60 R14" aria-pressed="false">185/60 R14</button></li>
+          <li><button type="button" class="chip" data-medida="185/65 R14" aria-pressed="false">185/65 R14</button></li>
+          <li><button type="button" class="chip" data-medida="195/55 R15" aria-pressed="false">195/55 R15</button></li>
+          <li><button type="button" class="chip" data-medida="195/60 R15" aria-pressed="false">195/60 R15</button></li>
+          <li><button type="button" class="chip" data-medida="205/55 R16" aria-pressed="false">205/55 R16</button></li>
+          <li><button type="button" class="chip" data-medida="215/65 R17" aria-pressed="false">215/65 R17</button></li>
+          <li><button type="button" class="chip" data-medida="225/70 R15" aria-pressed="false">225/70 R15</button></li>
+          <li><button type="button" class="chip" data-medida="225/70 R16" aria-pressed="false">225/70 R16</button></li>
+          <li><button type="button" class="chip" data-medida="235/60 R16" aria-pressed="false">235/60 R16</button></li>
+          <li><button type="button" class="chip" data-medida="235/65 R17" aria-pressed="false">235/65 R17</button></li>
+          <li><button type="button" class="chip" data-medida="255/65 R17" aria-pressed="false">255/65 R17</button></li>
+          <li><button type="button" class="chip" data-medida="255/70 R16" aria-pressed="false">255/70 R16</button></li>
+          <li><button type="button" class="chip" data-medida="265/70 R17" aria-pressed="false">265/70 R17</button></li>
+        </ul>
+        <p class="status" id="chips-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 7. Servicios -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="servicios-title">Servicios</h2>
+          <p>Servicios que aparecen en la ficha pública consultada.</p>
+        </div>
+
+        <ul class="cards cards-3">
+          <li class="card service-card">
+            <h3>Cambio de aceite</h3>
+            <p>Mantenimiento periódico del motor.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Cambio de aceite">Solicitar cita</button>
+          </li>
+          <li class="card service-card">
+            <h3>Llantas y neumáticos</h3>
+            <p>Consulta de medidas y marcas para tu vehículo.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Llantas y neumáticos">Solicitar cita</button>
+          </li>
+          <li class="card service-card">
+            <h3>Frenos</h3>
+            <p>Revisión y reparación del sistema de frenos.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Frenos">Solicitar cita</button>
+          </li>
+          <li class="card service-card">
+            <h3>Suspensión y dirección</h3>
+            <p>Revisión y reparación de suspensión y dirección.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Suspensión y dirección">Solicitar cita</button>
+          </li>
+          <li class="card service-card">
+            <h3>Baterías</h3>
+            <p>Consulta de baterías para tu vehículo.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Baterías">Solicitar cita</button>
+          </li>
+          <li class="card service-card">
+            <h3>Diagnóstico de motores</h3>
+            <p>Evaluación para identificar posibles fallas del motor.</p>
+            <p class="card-note">Servicio publicado en la ficha pública consultada. Confirma disponibilidad por WhatsApp.</p>
+            <button class="btn btn-dark" type="button" data-service="Diagnóstico de motores">Solicitar cita</button>
+          </li>
+        </ul>
+
+        <div class="pending-box">
+          <h3>Servicios pendientes de confirmación</h3>
+          <p>Aparecen en la ficha pública, pero el negocio todavía no los ha confirmado directamente.</p>
+          <ul class="pending-list">
+            <li><span>Alineación y balanceo</span><em>Pendiente de confirmación directa</em></li>
+            <li><span>Diagnóstico con escáner</span><em>Pendiente de confirmación directa</em></li>
+            <li><span>Averías eléctricas</span><em>Pendiente de confirmación directa</em></li>
+            <li><span>Transmisión</span><em>Pendiente de confirmación directa</em></li>
+            <li><span>Cambio de filtro de aire del habitáculo</span><em>Pendiente de confirmación directa</em></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Solicitud de servicio -->
+    <section class="section alt" id="cita" aria-labelledby="cita-title">
+      <div class="wrap narrow">
+        <div class="section-head">
+          <h2 id="cita-title">Solicitud de servicio</h2>
+          <p>Prepara una solicitud de cita para enviarla por WhatsApp.</p>
+        </div>
+
+        <div class="callout" role="note">
+          <strong>Enviar esta solicitud no confirma automáticamente la cita. La disponibilidad debe ser confirmada por el negocio.</strong>
+        </div>
+
+        <form id="service-form" class="card form-card" novalidate>
+          <div class="error-summary" id="service-summary" role="alert" tabindex="-1" hidden></div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="s-nombre">Nombre</label>
+              <input id="s-nombre" name="nombre" type="text" maxlength="60" autocomplete="off" required aria-required="true" aria-describedby="s-nombre-error">
+              <p class="field-error" id="s-nombre-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="s-servicio">Servicio requerido</label>
+              <select id="s-servicio" name="servicio" required aria-required="true" aria-describedby="s-servicio-error">
+                <option value="">Selecciona un servicio</option>
+                <option>Cambio de aceite</option>
+                <option>Llantas y neumáticos</option>
+                <option>Frenos</option>
+                <option>Suspensión y dirección</option>
+                <option>Baterías</option>
+                <option>Diagnóstico de motores</option>
+                <option>Otro (indícalo en el mensaje)</option>
+              </select>
+              <p class="field-error" id="s-servicio-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="s-vehiculo">Marca y modelo del vehículo</label>
+              <input id="s-vehiculo" name="vehiculo" type="text" maxlength="60" autocomplete="off" required aria-required="true" aria-describedby="s-vehiculo-error">
+              <p class="field-error" id="s-vehiculo-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="s-anio">Año (opcional)</label>
+              <input id="s-anio" name="anio" type="text" inputmode="numeric" maxlength="4" autocomplete="off" aria-describedby="s-anio-hint s-anio-error">
+              <p class="hint" id="s-anio-hint">De 1980 a 2027</p>
+              <p class="field-error" id="s-anio-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="s-fecha">Fecha preferida (opcional)</label>
+              <input id="s-fecha" name="fecha" type="date" aria-describedby="s-fecha-error">
+              <p class="field-error" id="s-fecha-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="s-horario">Horario preferido</label>
+              <select id="s-horario" name="horario">
+                <option value="">Sin preferencia</option>
+                <option>Mañana</option>
+                <option>Tarde</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="s-mensaje">Mensaje (opcional)</label>
+            <textarea id="s-mensaje" name="mensaje" rows="3" maxlength="200" aria-describedby="s-mensaje-count s-mensaje-error"></textarea>
+            <p class="hint" id="s-mensaje-count"><span data-count-for="s-mensaje">0</span>/200 caracteres</p>
+            <p class="field-error" id="s-mensaje-error" hidden></p>
+          </div>
+
+          <p class="privacy">Esta demostración no guarda ni envía tus datos. Utiliza datos de prueba.</p>
+          <div class="btn-row">
+            <button class="btn btn-red btn-lg" type="submit">Preparar mensaje de WhatsApp</button>
+            <button class="btn btn-outline-dark btn-lg" type="button" data-copy-form="service">Copiar mensaje</button>
+          </div>
+          <p class="status" id="service-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 9. Categorías de productos -->
+    <section class="section" id="productos" aria-labelledby="productos-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="productos-title">Productos</h2>
+          <p>Categorías para orientar tu consulta. Pregunta por WhatsApp qué opciones hay para tu vehículo.</p>
+        </div>
+        <ul class="cards cards-3">
+          <li class="card product-card">
+            <h3>Llantas</h3>
+            <p>Consulta medidas y marcas para tu vehículo.</p>
+            <button class="btn btn-dark" type="button" data-wa-key="llantas">Consultar por WhatsApp</button>
+          </li>
+          <li class="card product-card">
+            <h3>Aceites y lubricantes</h3>
+            <p>Consulta qué opciones existen para tu automóvil o motocicleta.</p>
+            <button class="btn btn-dark" type="button" data-wa-key="aceites">Consultar por WhatsApp</button>
+          </li>
+          <li class="card product-card">
+            <h3>Aros</h3>
+            <p>Consulta medidas y compatibilidad con tu vehículo.</p>
+            <button class="btn btn-dark" type="button" data-wa-key="aros">Consultar por WhatsApp</button>
+          </li>
+          <li class="card product-card">
+            <h3>Baterías</h3>
+            <p class="tag">Categoría conceptual</p>
+            <p>Consulta modelos y compatibilidad para tu vehículo.</p>
+            <button class="btn btn-dark" type="button" data-wa-key="baterias">Consultar por WhatsApp</button>
+          </li>
+          <li class="card product-card">
+            <h3>Aditivos</h3>
+            <p class="tag">Categoría conceptual</p>
+            <p>Productos para limpieza y cuidado de sistemas del vehículo.</p>
+            <button class="btn btn-dark" type="button" data-wa-key="aditivos">Consultar por WhatsApp</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10. Consulta de promociones -->
+    <section class="section promo" id="promociones" aria-labelledby="promo-title">
+      <div class="wrap promo-row">
+        <div>
+          <h2 id="promo-title">Pregunta por promociones</h2>
+          <p>Consulta directamente si existen promociones vigentes y cuáles son sus condiciones.</p>
+        </div>
+        <button class="btn btn-white btn-lg" type="button" data-wa-key="promos">Preguntar por WhatsApp</button>
+      </div>
+    </section>
+
+    <!-- 11. Nosotros -->
+    <section class="section" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="wrap about">
+        <img class="about-logo" src="assets/logo/sm-quality-tires-logo.webp" alt="SM Quality Tires" width="447" height="447" loading="lazy">
+        <div>
+          <h2 id="nosotros-title">Nosotros</h2>
+          <p>SM Quality Tires aparece públicamente como un taller automotriz en Quito con servicios y productos relacionados con llantas, mantenimiento y cuidado del vehículo.</p>
+          <p class="note">Descripción preparada para esta propuesta conceptual y sujeta a aprobación del negocio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Ubicación y contacto -->
+    <section class="section dark" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contacto-title">Ubicación y contacto</h2>
+          <dl class="contact-list">
+            <div>
+              <dt>Dirección</dt>
+              <dd data-cfg="direccion">Av. Río Coca E10-100, Isla Pinzón, 170138 Quito, Ecuador</dd>
+            </div>
+            <div>
+              <dt>WhatsApp y teléfono</dt>
+              <dd data-cfg="numero">098 009 9210</dd>
+            </div>
+            <div>
+              <dt>Horario público</dt>
+              <dd>
+                <ul class="hours" id="hours-list">
+                  <li><span>Lunes a viernes</span><span>09:00–17:30</span></li>
+                  <li><span>Sábado</span><span>09:00–15:00</span></li>
+                  <li><span>Domingo</span><span>Cerrado</span></li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+          <p class="note">Información pública consultada el <span data-cfg="fecha">29 de octubre de 2026</span>. Confirma antes de acudir.</p>
+          <div class="btn-row">
+            <a class="btn btn-red btn-lg" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20R%C3%ADo%20Coca%20E10-100%2C%20Isla%20Pinz%C3%B3n%2C%20170138%20Quito%2C%20Ecuador" target="_blank" rel="noopener noreferrer" data-cfg-maps>Cómo llegar<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+            <a class="btn btn-outline-light btn-lg" href="tel:+593980099210" data-cfg-tel>Llamar</a>
+            <button class="btn btn-outline-light btn-lg" type="button" data-wa-key="general">WhatsApp</button>
+          </div>
+        </div>
+        <figure class="contact-figure">
+          <img src="assets/images/fachada.webp" width="781" height="475"
+               alt="Fachada del local con el letrero de SM Quality Tires" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 13. Preguntas frecuentes -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap narrow">
+        <div class="section-head">
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Puedo consultar una medida de llanta?</summary>
+            <p>Sí. Indica la medida o los datos de tu vehículo y prepara la consulta por WhatsApp. La disponibilidad la confirma el negocio.</p>
+          </details>
+          <details>
+            <summary>¿La solicitud confirma automáticamente la cita?</summary>
+            <p>No. Enviar la solicitud no confirma la cita. La disponibilidad debe ser confirmada por el negocio.</p>
+          </details>
+          <details>
+            <summary>¿Los precios y existencias pueden cambiar?</summary>
+            <p>Sí. Esta demostración no muestra precios ni existencias. Deben confirmarse directamente con el negocio antes de decidir.</p>
+          </details>
+          <details>
+            <summary>¿Cuál es el horario público observado?</summary>
+            <p>La ficha pública consultada muestra lunes a viernes de 09:00 a 17:30 y sábado de 09:00 a 15:00. Domingo aparece como cerrado. Confirma antes de acudir.</p>
+          </details>
+          <details>
+            <summary>¿Qué métodos de pago aparecen publicados?</summary>
+            <p>La ficha pública muestra tarjetas y pagos NFC para atención presencial. Esto no implica pagos en línea.</p>
+          </details>
+          <details>
+            <summary>¿Esta es la página oficial?</summary>
+            <p>No. Es una propuesta conceptual de demostración y todavía no representa el sitio web oficial de SM Quality Tires.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 14. Pie -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <img src="assets/logo/sm-quality-tires-logo.webp" alt="SM Quality Tires" width="447" height="447" loading="lazy">
+        <div>
+          <p class="footer-name">SM Quality Tires</p>
+          <p data-cfg="direccion">Av. Río Coca E10-100, Isla Pinzón, 170138 Quito, Ecuador</p>
+          <p>WhatsApp: <span data-cfg="numero">098 009 9210</span></p>
+        </div>
+      </div>
+      <p class="disclaimer">Propuesta conceptual desarrollada con fines demostrativos. Esta demo no representa actualmente el sitio web oficial de SM Quality Tires. Los productos, servicios, precios, promociones, horarios, ubicaciones y disponibilidades deberán ser verificados y aprobados antes de su publicación.</p>
+    </div>
+  </footer>
+
+  <!-- Vista previa de WhatsApp -->
+  <dialog id="wa-dialog" aria-labelledby="wa-title">
+    <div class="dialog-body">
+      <h2 id="wa-title">Vista previa del mensaje</h2>
+      <p>Revisa el mensaje. No se envía nada automáticamente: al pulsar «Abrir WhatsApp» se abrirá WhatsApp con este texto ya escrito, y tú decides si lo envías.</p>
+      <label for="wa-text" class="visually-hidden">Mensaje que se preparará en WhatsApp</label>
+      <textarea id="wa-text" readonly rows="9"></textarea>
+      <p class="demo-note" id="wa-demo-note" hidden>Modo demostración: el mensaje lleva el prefijo [DEMO]. No envíes mensajes de prueba al negocio.</p>
+      <p class="status" id="wa-status" role="status" aria-live="polite"></p>
+      <div class="btn-row">
+        <a class="btn btn-red" id="wa-open" href="#" target="_blank" rel="noopener noreferrer">Abrir WhatsApp<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+        <button class="btn btn-outline-dark" type="button" id="wa-copy">Copiar mensaje</button>
+        <button class="btn btn-outline-dark" type="button" id="wa-close">Cerrar</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
